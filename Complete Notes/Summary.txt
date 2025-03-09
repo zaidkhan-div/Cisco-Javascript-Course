@@ -1,0 +1,13 @@
+Module 1
+After completing Module 1, you will:
+
+1: understand the fundamental programming concepts, such as: interpreting and the interpreter, compilation and the compiler, client-side vs. server-side programming;
+
+2: have basic knowledge of how to set up and use the basic programming environment (online or local);
+
+3: gain skills allowing you to run your first JavaScript program on the client side (both as an element embedded in the HTML page and directly in the browser console).
+
+
+
+
+
