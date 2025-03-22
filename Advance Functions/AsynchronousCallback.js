@@ -11,3 +11,27 @@
 // Thus, the moment the callback function is called is not determined by its order, but by an arbitrarily imposed delay. The delay only applies to the callback function given to setTimeout, while the rest of the code is still executed synchronously.
 
 // Let's modify the previous example a bit. In the outer function, we do not call callback() immediately, but pass it to setTimeout, which executes it with a delay of 1000 milliseconds (one second).
+
+let inner = function () {
+    console.log('inner 1');
+}
+let outer = function (callback) {
+    console.log('outer 1');
+    setTimeout(callback, 1000) /*ms*/;
+    console.log('outer 2');
+}
+console.log('test 1');
+outer(inner);
+console.log('test 2');
+
+
+// test 1
+// outer 1
+// outer 2
+// test 2
+// ...
+// inner 1
+
+// Synchronous JS: Code executes line by line. If one function takes time, everything waits until it's done.
+
+// Asynchronous JS: Tasks that take time (like API calls, setTimeout, etc.) don’t block the rest of the code. Other tasks keep running while waiting for the delayed task to complete.
