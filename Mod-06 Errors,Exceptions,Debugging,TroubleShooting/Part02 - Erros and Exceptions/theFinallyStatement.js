@@ -59,3 +59,16 @@ try {
 }
 // Now the console.log call from the finally block will be executed, although this doesn't change the fact that program execution will be stopped at this second ReferenceError, as it isn’t caught.
 
+// Nested Try Catch Blocks is help for multiple Error to occur
+let a = 10;
+try {
+    a = b; // First ReferenceError
+} catch (error) {
+    try {
+        console.log(b); // Second ReferenceError
+    } catch {
+        console.log("Second catch!"); // -> Second catch!
+    }
+} finally {
+    console.log("Finally!"); // -> Finally!
+}
